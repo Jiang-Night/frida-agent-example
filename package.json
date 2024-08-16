@@ -6,12 +6,18 @@
   "main": "agent/index.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "frida-compile agent/index.ts -o _agent.js -c",
-    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+    "build": "frida-compile agent/index.ts -o _agent.js -c ",
+    "watch": "frida-compile agent/index.ts -o _agent.js -w",
+    "lint": "eslint agent/**/*.ts"
   },
   "devDependencies": {
-    "@types/frida-gum": "^18.5.1",
-    "@types/node": "^18.19.3",
-    "frida-compile": "^16.4.1"
+    "@types/frida-gum": "^17.2.0",
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "frida-compile": "^10.2.5"
+  },
+  "dependencies": {
+    "jnitrace-engine": "^1.1.0"
   }
 }
